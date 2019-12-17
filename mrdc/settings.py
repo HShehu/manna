@@ -25,7 +25,7 @@ SECRET_KEY = '_yhqy+-8j-z$o07$*k9o#9bzfcvd%5efkyo*f=&shtjxiwcprk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['harande.pythonanywhere.com']
 
 
 # Application definition
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/Harande/manna/static'
 
 MEDIA_URL = '/media/'
 
