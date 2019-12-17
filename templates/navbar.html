@@ -11,20 +11,28 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class=" nav-text navbar-nav ml-auto mr-5">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'manna-home' %}">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item ">
+                {% url 'manna-home' as url %}
+                <a class="nav-link {% if request.path == url %}  active{% endif %}" href="{% url 'manna-home' %}">Home
+                    <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'manna-what_we_do' %}">What We Do</a>
+                {% url 'manna-what_we_do' as url %}
+                <a class="nav-link {% if request.path == url %}  active{% endif %}"
+                    href="{% url 'manna-what_we_do' %}">What We Do</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'manna-how_you_can_help' %}">How you can help</a>
+                {% url 'manna-how_you_can_help' as url %}
+                <a class="nav-link {% if request.path == url %}  active{% endif %}"
+                    href="{% url 'manna-how_you_can_help' %}">How you can help</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/blog/">Blog</a>
+                <a class="nav-link {% if request.path == '/blog/' %}  active{% endif %}" href="/blog/">Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'manna-get_in_touch' %}">Get in Touch</a>
+                {% url 'manna-get_in_touch' as url %}
+                <a class="nav-link {% if request.path == url %}  active{% endif %}"
+                    href="{% url 'manna-get_in_touch' %}">Get in Touch</a>
             </li>
         </ul>
     </div>
