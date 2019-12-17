@@ -1,5 +1,6 @@
-.navbar {
-    height: 100%;
+.navbar-light .navbar-nav .nav-link:hover {
+
+    font-size: 130%;
 }
 
 .cursive {
@@ -38,10 +39,9 @@ h1 {
         sans-serif;
 }
 
-.accounts
-{
+.accounts {
     font-family: 'Acme',
-    sans-serif;
+        sans-serif;
     font-size: 180%;
 }
 
