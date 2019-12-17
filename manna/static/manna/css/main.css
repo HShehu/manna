@@ -1,5 +1,5 @@
 .navbar {
-    height: 70px;
+    height: 100%;
 }
 
 .cursive {
@@ -32,13 +32,6 @@ h1 {
 }
 
 
-/* .carousel-item {
-    height: 500px;
-}
-
-.carousel-item img {
-    height: 100%;
-} */
 
 .contact-title h3 {
     font-family: 'Acme',
