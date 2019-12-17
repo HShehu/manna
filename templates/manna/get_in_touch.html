@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} Get in Touch {% endblock title %}
+
+{% block content %}
+
+<h1 class="text-center h1 display-4">Get in Touch</h1>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row contact-title">
+            <div class="col-6 text-center">
+                <i class="fa fa-phone fa-3x"></i>
+                <hr>
+                <h3>Phone Numbers</h3>
+                <hr>
+                {% for phone_no in phone_nos %}
+                <p class="lead"><strong>{{ phone_no.p_num }}</strong></p>
+                <br>
+                {% endfor %}
+            </div>
+
+            <div class="col-6 text-center">
+                <i class="fa fa-envelope-o fa-3x"></i>
+                <hr>
+                <h3>E-Mail Addresses</h3>
+                <hr>
+                {% for email in emails %}
+                <p class="lead"><strong>{{ email.mail }}</strong></p>
+                <br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

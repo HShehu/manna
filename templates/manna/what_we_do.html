@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} What We Do {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center h1 display-4">What we Do</h1>
+
+    <div class="jumbotron">
+        <p class="lead">
+            manna resource development center aka(MRDC) is a christian faith based, community focused
+            development organisation. it also is a response to the state of hopelessness,poverty,ignorance and apathy
+            being
+            experienced in our communities. it is involved in the identification, sourcing and utilization of natural
+            resources for economic empowerment and development of communities where these resources are found. concieved
+            in
+            the year 2002,it was birthed in april 2004, registered with plateau state ministry of youths and sports in
+            the
+            same year n got certificate of incoporation from the corporate affairs commission, abuja on the 31st october
+            2005 with CAC No.19762.
+            mrdc is a christian faith base community focused development organisation. it is non-government and
+            non-profit
+            oriented.
+            its scope of coverge for now is nigeria and later worldwide. it has a board of trustees, advisory team and
+            management team. it is a member of: AONN,CRUDAN,CiSHAN, Interfaith, Research Network, NYNETHA. Amongst
+            others it
+            collaborates with national and international organisation
+        </p>
+    </div>
+</div>
+
+<div class="container">
+
+    <h2 class="text-center projects">PROJECTS</h2>
+    <br>
+    <div class="row">
+        {% for project in projects %}
+
+        <div class="col-4 mb-2">
+            <div class="card h-100">
+                <img src="{{project.project_photo.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.brief_description|truncatewords:20 }}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <a class="btn btn-outline-primary" href="{% url 'project-detail' project.id %}">Read More</a>
+                    </small> &nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock content %}

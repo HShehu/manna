@@ -1,0 +1,57 @@
+.navbar {
+    height: 70px;
+}
+
+.cursive {
+    font-family: 'Satisfy',
+        cursive;
+    font-size: 180%;
+}
+
+h1 {
+    font-family: 'Zilla Slab Highlight',
+        cursive;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.nav-text li {
+    font-family: 'Allerta Stencil',
+        sans-serif;
+}
+
+.projects {
+    font-family: 'Barriecito',
+        cursive;
+}
+
+
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    height: 100%;
+}
+
+.contact-title h3 {
+    font-family: 'Acme',
+        sans-serif;
+}
+
+.accounts
+{
+    font-family: 'Acme',
+    sans-serif;
+    font-size: 180%;
+}
+
+body {
+    background-color: wheat;
+}

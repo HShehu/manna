@@ -1,0 +1,31 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <a class="navbar-brand " href="{% url 'manna-what_we_do' %}">
+        <img class="img-fluid" src="{% static "manna/img/manna-logo.png" %}">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class=" nav-text navbar-nav ml-auto mr-5">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'manna-home' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'manna-what_we_do' %}">What We Do</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'manna-how_you_can_help' %}">How you can help</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'manna-get_in_touch' %}">Get in Touch</a>
+            </li>
+        </ul>
+    </div>
+</nav>

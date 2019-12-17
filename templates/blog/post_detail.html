@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog Post{% endblock title %}
+
+{% block content %}
+<div class="container">
+<br>
+    <h2 class="text-center">{{post.title}}</h2>
+
+    <br>
+    <img class="img-fluid" src="{{post.image.url}}" >
+    <p class="lead">
+    {{post.content}}
+    </p>
+</div>
+{% endblock content %}

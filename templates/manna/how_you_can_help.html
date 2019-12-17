@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %} How You Can Help {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center h1 display-4">How You Can Help</h1>
+
+    <div class="jumbotron">
+        <p class="text-center lead">
+            You can support and partner with us by telling us what or how you wish to support us. If
+            you wish to make a cash pledge, you can write to us or here are other means that your pledges will be
+            received
+            through:
+        </p>
+    </div>
+
+    {% for account in accounts  %}
+    <hr>
+    <p class='accounts'>
+        Bank Name: {{account.bank}} <br>
+        Account Name: {{account.name}} <br>
+        Naira Account: {{account.naira_number}} <br>
+
+        {% if account.dollar_number %}
+        Dollar Account: {{account.dollar_number}} <br>
+        {% endif %}
+
+        {% if account.pound_number %}
+        Pound Account: {{account.pound_number}} <br>
+        {% endif %}
+
+    </p>
+    <br>
+    {% endfor %}
+</div>
+{% endblock content %}
